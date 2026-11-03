@@ -1,6 +1,7 @@
 import './landing.css'
 import { fetchPublicContent, type ContentKey, type SiteContent } from '../lib/content'
 import { mountCarousel } from './carousel'
+import { setupFloatingWhatsApp } from './floating-whatsapp'
 
 const CACHE_KEY = 'dandakaya:content'
 
@@ -126,35 +127,6 @@ function setupReveal() {
     { rootMargin: '0px 0px -10% 0px' },
   )
   targets.forEach((el) => io.observe(el))
-}
-
-/** Botão flutuante do WhatsApp: só aparece quando nenhum outro CTA grande está na tela. */
-function setupFloatingWhatsApp() {
-  const button = document.querySelector<HTMLElement>('.wa-float')
-  const heroCta = document.querySelector('.hero__cta')
-  const footerCta = document.querySelector('.site-footer__cta')
-  if (!button || !heroCta || !footerCta) {
-    button?.classList.add('is-visible')
-    return
-  }
-
-  // Duas leituras de posição por quadro, no máximo: barato e sem depender de IntersectionObserver.
-  let queued = false
-  const update = () => {
-    queued = false
-    const heroGone = heroCta.getBoundingClientRect().bottom < 0
-    const footerAway = footerCta.getBoundingClientRect().top > window.innerHeight
-    button.classList.toggle('is-visible', heroGone && footerAway)
-  }
-  const schedule = () => {
-    if (!queued) {
-      queued = true
-      requestAnimationFrame(update)
-    }
-  }
-  window.addEventListener('scroll', schedule, { passive: true })
-  window.addEventListener('resize', schedule, { passive: true })
-  update()
 }
 
 document.querySelectorAll('[data-year]').forEach((el) => {

@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabase'
 import { GALLERY_LIMIT, GALLERY_TABLE, type GalleryItem } from '../lib/content'
 import { ACCEPTED_TYPES, describeError, removeImage, uploadImage, validateImage } from './storage'
 
-const INSTAGRAM_URL = /^https:\/\/(www\.)?instagram\.com\/(p|reel|tv)\/[\w-]+\/?/i
+export const INSTAGRAM_URL = /^https:\/\/(www\.)?instagram\.com\/(p|reel|tv)\/[\w-]+\/?/i
 
 export function createGalleryManager(): HTMLElement {
   const root = document.createElement('div')

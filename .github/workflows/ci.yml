@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-and-build:
+    name: Testes e build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Testes
+        run: npm test
+
+      # Sem .env de propósito: garante que o build funciona como numa Vercel recém-configurada.
+      - name: Typecheck e build
+        run: npm run build
+
+      - name: Conferir que nenhum %VITE_*% ficou no HTML
+        run: |
+          if grep -rl '%VITE_' dist --include='*.html'; then
+            echo "::error::Variável de ambiente não substituída no HTML gerado."
+            exit 1
+          fi

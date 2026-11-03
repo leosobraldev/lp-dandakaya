@@ -20,6 +20,7 @@ lp-dandakaya/
 │   ├── landing/
 │   │   ├── main.ts             # Aplica conteúdo do backend, menu, revelação ao rolar
 │   │   ├── carousel.ts         # Carrossel "No nosso Instagram" (fotos da galeria do /admin)
+│   │   ├── floating-whatsapp.ts # Botão flutuante do WhatsApp
 │   │   └── landing.css
 │   ├── admin/
 │   │   ├── main.ts             # Login, recuperação de senha, checagem de admin, montagem do dashboard
@@ -30,6 +31,7 @@ lp-dandakaya/
 │   │   └── admin.css
 │   └── styles/tokens.css       # Paleta, fontes, raios, espaçamento
 ├── supabase/schema.sql         # Tabelas, RLS, bucket e policies
+├── .github/workflows/ci.yml    # Testes + build a cada push/PR
 ├── vite.config.ts              # Declara os dois entries (main + admin)
 └── .env                        # Chaves e dados do negócio (não versionar)
 ```
@@ -69,6 +71,17 @@ npm run build      # gera dist/ com index.html e admin/index.html
 ```
 
 Node 14 roda (Vite 4). Recomendado atualizar para Node 20+ e migrar para Vite 5/6.
+
+## Testes
+
+```bash
+npm test             # roda todos os testes uma vez
+npm run test:watch   # modo observação, enquanto edita
+```
+
+Os testes (Vitest + jsdom) ficam ao lado do código, em `src/**/*.test.ts`, e cobrem: leitura do conteúdo e da galeria no Supabase, validação e remoção de imagens do painel, links aceitos no carrossel, montagem do carrossel e o botão flutuante do WhatsApp.
+
+O GitHub Actions (`.github/workflows/ci.yml`) roda em todo push e pull request para `main`: instala as dependências, roda os testes e faz o build **sem `.env`**, falhando se algum `%VITE_*%` ficar sem substituir no HTML.
 
 ## Carrossel do Instagram
 

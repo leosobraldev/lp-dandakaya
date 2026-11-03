@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'
 
@@ -22,6 +23,11 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    test: {
+      environment: 'jsdom',
+      include: ['src/**/*.test.ts'],
+      restoreMocks: true,
+    },
     build: {
       target: 'es2019',
       cssCodeSplit: true,
