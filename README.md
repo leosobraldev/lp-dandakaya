@@ -76,7 +76,17 @@ No /admin → "Carrossel do Instagram": escolha a foto, escreva uma descrição 
 
 ## Deploy
 
-Qualquer host estático (Vercel, Netlify, Cloudflare Pages). Build: `npm run build`, pasta: `dist`. Configure as variáveis `VITE_*` no painel do host.
+**Vercel:** importe o repositório; o preset Vite já usa `npm run build` e a pasta `dist`. Em Settings → Environment Variables, cadastre:
+
+- `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` (sem elas o site funciona com os textos padrão e o /admin mostra "Falta conectar o Supabase");
+- `VITE_CNPJ`;
+- `VITE_SITE_URL` só se usar domínio próprio (sem ela, o build usa o domínio `.vercel.app` do projeto).
+
+Depois de mudar uma variável, faça um novo deploy (as variáveis entram no build).
+
+No Supabase, em Authentication → URL Configuration, adicione `https://SEU-DOMINIO/admin/` em Redirect URLs para o "Esqueci a senha" funcionar.
+
+Outros hosts estáticos (Netlify, Cloudflare Pages) funcionam igual: build `npm run build`, pasta `dist`.
 
 ## Pendências de conteúdo
 
