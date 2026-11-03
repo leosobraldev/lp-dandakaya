@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dandakayá Espaço Afro · Salão de estética negra e acessórios de ancestralidade em Salvador</title>
+    <meta
+      name="description"
+      content="Tranças, dreads, terapia capilar, maquiagem para pele preta e lash designer, mais os acessórios de ancestralidade Dya Muene. Das irmãs Jessika e Jamile, em frente à Praça da Piedade, Salvador."
+    />
+    <meta name="theme-color" content="#EFE6D8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="%VITE_SUPABASE_URL%" crossorigin />
+    <meta property="og:title" content="Dandakayá Espaço Afro" />
+    <meta property="og:description" content="A sua beleza e cultura em um só lugar. Estética negra no Centro de Salvador." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <!-- Prévia ao compartilhar o link. Precisa de URL absoluta: preencha VITE_SITE_URL no .env. -->
+    <meta property="og:image" content="%VITE_SITE_URL%/logo/dandakaya-logo-circulo.png" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Logo Dandakayá Espaço Afro" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Dandakayá Espaço Afro",
+        "url": "%VITE_SITE_URL%/",
+        "logo": "%VITE_SITE_URL%/logo/dandakaya-logo.png",
+        "image": "%VITE_SITE_URL%/logo/dandakaya-logo-circulo.png",
+        "telephone": "+55 71 99192-1326",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Sete de Setembro, 624, Sala 103",
+          "addressLocality": "Salvador",
+          "addressRegion": "BA",
+          "postalCode": "40060-001",
+          "addressCountry": "BR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -12.9829419, "longitude": -38.5156852 },
+        "sameAs": ["https://www.instagram.com/dandakaya/"]
+      }
+    </script>
+    <script>document.documentElement.classList.add('js')</script>
+    <script type="module" src="/src/landing/main.ts"></script>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="i-whatsapp" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 2.75a9.25 9.25 0 0 0-7.98 13.93L2.75 21.25l4.7-1.24A9.25 9.25 0 1 0 12 2.75z" />
+        <path fill="currentColor" d="M8.7 7.4c.3-.3.8-.25 1 .12l.95 1.7c.17.32.1.7-.15.96l-.6.6a6.2 6.2 0 0 0 2.92 2.92l.6-.6c.26-.25.65-.32.96-.15l1.7.95c.37.21.42.71.12 1.01l-.8.8c-.62.62-1.55.83-2.37.52a9.4 9.4 0 0 1-5.28-5.28c-.31-.82-.1-1.75.52-2.37z" />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" />
+        <circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8h16M4 16h16" />
+      </symbol>
+      <!-- Pintura de tabatinga: traço com pressão variável, pontos e folhas fora da grade (gerado por script, desenhado como plate SVG) -->
+      <symbol fill="currentColor" id="m-shoulder" viewBox="0 0 240 40"><path d="M0 18.3L2.3 15.5L4.7 13L7 11.8L9.3 11.3L11.7 11.8L14 13.6L16.3 16.3L18.7 18.9L21 21.7L23.3 23.9L25.6 25.3L28 25.9L30.3 25L32.6 23.1L35 20.8L37.3 18.1L41.1 15.7L44.8 13.6L48.6 12.4L52.4 12.3L56.1 12.9L59.9 14.3L63.6 16.5L67.4 19L71.2 21.3L74.9 23.2L78.7 24.5L82.5 24.5L86.2 24.2L90 22.7L93.7 20.7L97.5 18.7L100.3 15.9L103.1 13.4L105.9 11.9L108.6 11.3L111.4 11.9L114.2 13.2L117 15.9L119.8 18.5L122.5 21.3L125.3 23.6L128.1 25.1L130.9 26L133.7 25.7L136.4 24.1L139.2 21.9L142 19L144.7 16.1L147.3 13.6L150 11.7L152.6 10.9L155.3 11.5L158 12.7L160.6 15.3L163.3 18L165.9 21.1L168.6 23.8L171.3 25.7L173.9 26.5L176.6 26L179.2 24.3L181.9 22L184.6 18.8L188 16.1L191.5 13.5L195 11.9L198.4 11.2L201.9 11.7L205.3 13L208.8 15.4L212.3 18.7L215.7 21.3L219.2 24.1L222.7 25.6L226.1 26.2L229.6 25.7L233.1 23.7L236.5 21.5L240 18.4L240 21.6L236.5 24L233.1 26.4L229.6 27.5L226.1 28L222.7 27.6L219.2 26L215.7 24.1L212.3 21.3L208.8 19.1L205.3 16.9L201.9 15.2L198.4 14.5L195 15L191.5 16.4L188 18.4L184.6 21.2L181.9 23.9L179.2 26.6L176.6 28.3L173.9 28.9L171.3 28.5L168.6 27.1L165.9 24.8L163.3 22L160.6 18.8L158 16.4L155.3 14.3L152.6 13.6L150 14L147.3 15.5L144.7 18L142 21L139.2 24L136.4 26.8L133.7 28.5L130.9 29.4L128.1 29.1L125.3 27.3L122.5 24.6L119.8 21.5L117 18.2L114.2 15.9L111.4 13.8L108.6 13.3L105.9 13.9L103.1 15.7L100.3 18.2L97.5 21.3L93.7 24.3L90 26.5L86.2 27.9L82.5 28.5L78.7 27.5L74.9 26L71.2 23.7L67.4 21L63.6 18.5L59.9 16.5L56.1 15L52.4 14.7L48.6 15.6L44.8 17.2L41.1 19.3L37.3 21.9L35 24.6L32.6 26.9L30.3 28.1L28 28.3L25.6 27.8L23.3 26.2L21 23.7L18.7 21.1L16.3 18.3L14 16.4L11.7 15.1L9.3 14.5L7 15.1L4.7 16.9L2.3 19.1L0 21.7Z"/><ellipse cx="8.6" cy="3.9" rx="1.9" ry="1.8" transform="rotate(25.3 8.6 5)"/><ellipse cx="45.1" cy="6.2" rx="2.3" ry="2.6" transform="rotate(15.7 45.1 5)"/><ellipse cx="63.7" cy="3.7" rx="1.3" ry="1.1" transform="rotate(-29.9 63.7 5)"/><ellipse cx="94.9" cy="5" rx="1.6" ry="1.7" transform="rotate(11.3 94.9 5)"/><ellipse cx="116.5" cy="4.6" rx="2.3" ry="2" transform="rotate(23.7 116.5 5)"/><ellipse cx="141.6" cy="6.2" rx="1.9" ry="1.4" transform="rotate(8.2 141.6 5)"/><ellipse cx="179" cy="4.1" rx="1.4" ry="1.5" transform="rotate(28.1 179 5)"/><ellipse cx="200.9" cy="4.2" rx="2.1" ry="1.8" transform="rotate(-17.5 200.9 5)"/><ellipse cx="227.5" cy="5.6" rx="1.4" ry="1.5" transform="rotate(12.8 227.5 5)"/><ellipse cx="15" cy="36.3" rx="1.2" ry="1" transform="rotate(-22.2 15 35)"/><ellipse cx="47.8" cy="36.1" rx="2.1" ry="1.6" transform="rotate(21.7 47.8 35)"/><ellipse cx="82.4" cy="34.8" rx="2.2" ry="2.3" transform="rotate(-15.1 82.4 35)"/><ellipse cx="108.4" cy="34.2" rx="2.1" ry="1.9" transform="rotate(-5.7 108.4 35)"/><ellipse cx="140.8" cy="35.4" rx="1.8" ry="1.6" transform="rotate(14.1 140.8 35)"/><ellipse cx="162.5" cy="34.1" rx="1.9" ry="1.8" transform="rotate(-11.3 162.5 35)"/><ellipse cx="202.3" cy="36.1" rx="2.2" ry="2.2" transform="rotate(25.1 202.3 35)"/><ellipse cx="220.5" cy="35" rx="1.8" ry="1.5" transform="rotate(3.4 220.5 35)"/></symbol>
+      <symbol fill="currentColor" id="m-leaves" viewBox="0 0 240 40"><path d="M0 19L5.1 18.6L10.2 18.4L15.3 18.4L20.3 18.5L25.4 18.8L30.5 18.8L35.6 19.1L40.7 19.1L45.8 19.2L50.9 19.5L55.9 19.6L61 20L66.1 20.1L71.2 19.8L76.3 19.5L81.4 19.2L86.8 18.5L92.3 18.3L97.8 18.2L103.3 18.4L108.8 18.6L114.2 18.7L119.7 19L125.2 19L130.7 19.2L136.1 19.4L141.6 19.7L147.1 20.1L152.6 20.2L158 20L163.5 19.6L169 19.2L173.4 18.8L177.9 18.4L182.3 18.3L186.7 18.6L191.2 18.8L195.6 18.9L200.1 18.9L204.5 19.1L208.9 19.2L213.4 19.3L217.8 19.7L222.2 19.9L226.7 20L231.1 19.9L235.6 19.5L240 19.2L240 20.8L235.6 21L231.1 21.1L226.7 21.3L222.2 21.5L217.8 21.6L213.4 21.7L208.9 21.3L204.5 20.9L200.1 20.5L195.6 20.1L191.2 19.9L186.7 20L182.3 20.4L177.9 20.6L173.4 20.7L169 20.8L163.5 21L158 21.1L152.6 21.3L147.1 21.4L141.6 21.8L136.1 21.7L130.7 21.4L125.2 21L119.7 20.4L114.2 20.2L108.8 19.9L103.3 20.1L97.8 20.3L92.3 20.6L86.8 20.9L81.4 20.8L76.3 21L71.2 21.2L66.1 21.2L61 21.4L55.9 21.6L50.9 21.5L45.8 21.4L40.7 20.9L35.6 20.4L30.5 20.2L25.4 19.9L20.3 20.1L15.3 20.3L10.2 20.6L5.1 20.8L0 21Z"/><path transform="rotate(-49.6 9.3 20)" d="M9.3 20q9 -5.8 18 0q-9 5.2 -18 0z"/><path transform="rotate(42.6 30.6 20)" d="M30.6 20q9.4 -6 18.7 0q-9.4 5.4 -18.7 0z"/><path transform="rotate(-44 52.3 20)" d="M52.3 20q7.1 -4.5 14.1 0q-7.1 4.1 -14.1 0z"/><path transform="rotate(39.1 74.4 20)" d="M74.4 20q6.6 -4.3 13.3 0q-6.6 3.8 -13.3 0z"/><path transform="rotate(-42.2 99.1 20)" d="M99.1 20q8.2 -5.2 16.4 0q-8.2 4.7 -16.4 0z"/><path transform="rotate(41.2 123 20)" d="M123 20q6.6 -4.3 13.3 0q-6.6 3.8 -13.3 0z"/><path transform="rotate(-35.1 140.7 20)" d="M140.7 20q6.4 -4.1 12.8 0q-6.4 3.7 -12.8 0z"/><path transform="rotate(38.5 163.1 20)" d="M163.1 20q6.7 -4.3 13.4 0q-6.7 3.9 -13.4 0z"/><path transform="rotate(-46.5 188 20)" d="M188 20q8.9 -5.7 17.8 0q-8.9 5.1 -17.8 0z"/><path transform="rotate(49.4 206.9 20)" d="M206.9 20q9.1 -5.8 18.3 0q-9.1 5.3 -18.3 0z"/><path transform="rotate(-43.6 230.9 20)" d="M230.9 20q8.5 -5.5 17 0q-8.5 4.9 -17 0z"/></symbol>
+    </svg>
+
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="wrap site-header__bar">
+        <a class="logo" href="#topo" aria-label="Dandakayá Espaço Afro, início">
+          <img class="logo__img" src="/logo/dandakaya-logo-pequeno.svg" alt="" width="126" height="52" />
+        </a>
+
+        <nav class="nav" id="menu" aria-label="Principal">
+          <a href="#espacos">Espaços</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#sobre">Nossa história</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <a class="btn btn--ember btn--sm" href="https://wa.me/%VITE_WHATSAPP_NUMBER%?text=Ol%C3%A1%2C%20Dandakay%C3%A1!" target="_blank" rel="noopener" data-track="whatsapp-header">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+            <span>WhatsApp</span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
+            <span class="visually-hidden">Abrir menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="topo" aria-labelledby="hero-title">
+        <div class="wrap hero__grid">
+          <h1 class="hero__title" id="hero-title" data-content="hero_headline">A sua beleza e cultura em um só lugar</h1>
+
+          <div class="hero__copy">
+            <p class="hero__lede" data-content="hero_subheadline">
+              Salão de estética negra e uma loja de acessórios ligados à ancestralidade, no Centro de Salvador, em frente à Praça da Piedade.
+            </p>
+            <p class="hero__where">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>
+              Av. Sete de Setembro, 624 · Sala 103 · Barris
+            </p>
+          </div>
+
+          <div class="hero__stage">
+            <a class="btn btn--ember btn--lg hero__cta" href="https://wa.me/%VITE_WHATSAPP_NUMBER%?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20Dandakay%C3%A1." target="_blank" rel="noopener" data-track="whatsapp-hero">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+              <span>Conversar no WhatsApp</span>
+            </a>
+          <figure class="vessel vessel--arch hero__vessel" data-content-img="hero_image_url" data-alt="Ambiente do Dandakayá Espaço Afro" data-priority>
+            <svg class="vessel__paint vessel__paint--shoulder" aria-hidden="true"><use href="#m-shoulder" /></svg>
+            <svg class="vessel__paint vessel__paint--base" aria-hidden="true"><use href="#m-leaves" /></svg>
+          </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--clay espacos" id="espacos" aria-labelledby="espacos-title">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 class="section-title" id="espacos-title">Dois espaços, uma mesma casa</h2>
+            <p class="section-lede">O salão e a loja dividem o mesmo endereço, na Piedade.</p>
+          </header>
+
+          <div class="espacos__pair">
+            <article class="espaco" aria-labelledby="loja-title">
+              <figure class="vessel vessel--arch vessel--on-clay" data-reveal data-content-img="loja_image_url" data-alt="Acessórios da linha Dya Muene">
+                <svg class="vessel__paint vessel__paint--shoulder" aria-hidden="true"><use href="#m-shoulder" /></svg>
+            <svg class="vessel__paint vessel__paint--base" aria-hidden="true"><use href="#m-leaves" /></svg>
+              </figure>
+              <div class="espaco__body">
+                <h3 class="espaco__title" id="loja-title" data-content="loja_title">Nossa Loja</h3>
+                <p data-content="loja_text">
+                  Acessórios ligados à ancestralidade negra da linha Dya Muene: búzios, arames e peças voltadas aos orixás e aos Nkisi. E a linha sensorial, com sabonetes e perfumes.
+                </p>
+                <a class="link-arrow" href="https://wa.me/%VITE_WHATSAPP_NUMBER%?text=Ol%C3%A1!%20Quero%20saber%20o%20que%20tem%20na%20loja." target="_blank" rel="noopener" data-track="whatsapp-loja">
+                  Perguntar sobre a loja <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="espaco espaco--offset" aria-labelledby="salao-title">
+              <figure class="vessel vessel--bowl vessel--on-clay" data-reveal data-content-img="salao_image_url" data-alt="Atendimento no Salão Especializado">
+                <svg class="vessel__paint vessel__paint--shoulder" aria-hidden="true"><use href="#m-shoulder" /></svg>
+            <svg class="vessel__paint vessel__paint--base" aria-hidden="true"><use href="#m-leaves" /></svg>
+              </figure>
+              <div class="espaco__body">
+                <h3 class="espaco__title" id="salao-title" data-content="salao_title">Salão Especializado</h3>
+                <p data-content="salao_text">
+                  Terapia capilar, dreads, tranças e maquiagem para pele preta, feitos por quem entende de cabelo crespo e cacheado. Novidade: estamos abrindo um studio de Lash Designer.
+                </p>
+                <a class="link-arrow" href="https://wa.me/%VITE_WHATSAPP_NUMBER%?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20sal%C3%A3o." target="_blank" rel="noopener" data-track="whatsapp-salao">
+                  Agendar no salão <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--fired portfolio" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="wrap">
+          <header class="section-head section-head--row">
+            <h2 class="section-title" id="portfolio-title">No nosso Instagram</h2>
+            <a class="link-arrow link-arrow--dark" href="https://www.instagram.com/dandakaya/" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg> @dandakaya
+            </a>
+          </header>
+
+          <!-- Carrossel alimentado pela galeria do /admin (src/landing/carousel.ts). Vazio → link para o perfil. -->
+          <div class="insta" data-gallery>
+            <div class="insta__fallback">
+              <svg class="insta__paint" aria-hidden="true"><use href="#m-shoulder" /></svg>
+              <p>Tranças, cortes, novidades da loja e o dia a dia do espaço aparecem primeiro no Instagram.</p>
+              <a class="btn btn--outline" href="https://www.instagram.com/dandakaya/" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg>
+                <span>Ver o perfil</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--kiln3 sobre" id="sobre" aria-labelledby="sobre-title">
+        <div class="wrap sobre__grid">
+          <h2 class="section-title" id="sobre-title">Jessika e Jamile: duas irmãs, uma casa preta no Centro de Salvador</h2>
+          <figure class="vessel vessel--plate vessel--on-clay sobre__photo has-image" data-reveal data-content-img="sobre_image_url" data-alt="Jessika e Jamile, fundadoras do Dandakayá, sentadas lado a lado e sorrindo">
+            <img class="is-loaded" src="/fotos/fundadoras.jpg" alt="Jessika e Jamile, fundadoras do Dandakayá, sentadas lado a lado e sorrindo" width="1101" height="826" loading="lazy" decoding="async" />
+          </figure>
+          <div class="sobre__text" data-content-html="sobre_text">
+            <!-- TODO(conteúdo): completar com a história real das irmãs (ou editar em /admin → "Nossa história"). -->
+            <p>O Dandakayá é das irmãs Jessika e Jamile. Elas criaram um lugar onde a beleza negra é cuidada por quem a conhece, e onde a cultura afro está em cada detalhe da casa.</p>
+            <p>O salão trata cabelo e pele negros como especialidade, não como exceção. A loja traz a ancestralidade para o dia a dia, com os acessórios da linha Dya Muene e a linha sensorial. É um negócio de mulheres negras, feito para a comunidade negra de Salvador.</p>
+          </div>
+          <svg class="sobre__paint" aria-hidden="true"><use href="#m-leaves" /></svg>
+        </div>
+      </section>
+
+      <section class="band band--kiln4 faq" id="duvidas" aria-labelledby="faq-title">
+        <div class="wrap faq__grid">
+          <h2 class="section-title" id="faq-title">Dúvidas frequentes</h2>
+          <div class="faq__list">
+            <details class="faq__item" name="faq">
+              <summary>Como faço para agendar no salão?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
+              <div class="faq__answer"><p>Pelo WhatsApp (71) 99192-1326. Conte o serviço que você quer e a gente responde com os horários disponíveis.</p></div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary>Onde fica o Dandakayá?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
+              <div class="faq__answer"><p>Na Av. Sete de Setembro, 624, Sala 103, em frente à Praça da Piedade, no Centro de Salvador.</p></div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary>O que tem na loja?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
+              <div class="faq__answer"><p>Duas linhas da casa. A Dya Muene, de acessórios ligados à ancestralidade negra: búzios, arames e peças voltadas aos orixás e aos Nkisi. E a linha sensorial, com sabonetes e perfumes. Pergunte pelo WhatsApp o que está disponível agora.</p></div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary>Quais serviços o salão faz?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
+              <div class="faq__answer"><p>Terapia capilar, dreads, tranças e maquiagem para pele preta, entre outros. E estamos abrindo um studio de Lash Designer. Para valores e horários, chame no WhatsApp.</p></div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary>Qual é o horário de funcionamento?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
+              <!-- TODO(conteúdo): informar o horário real. -->
+              <div class="faq__answer"><p>[Horário de funcionamento]. Em feriados, confirme pelo WhatsApp antes de vir.</p></div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <div class="wrap site-footer__grid">
+        <div class="site-footer__cta">
+          <p class="site-footer__big">Vem pra Piedade.</p>
+          <a class="btn btn--ember btn--lg" href="https://wa.me/%VITE_WHATSAPP_NUMBER%?text=Ol%C3%A1%2C%20Dandakay%C3%A1!" target="_blank" rel="noopener" data-track="whatsapp-footer">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+            <span>(71) 99192-1326</span>
+          </a>
+        </div>
+
+        <address class="site-footer__address">
+          <strong>Dandakayá Espaço Afro</strong>
+          Av. Sete de Setembro, 624, Sala 103<br />
+          Barris, em frente à Praça da Piedade<br />
+          Centro, Salvador - BA, 40060-001
+          <a class="link-arrow link-arrow--light" href="https://www.google.com/maps/place/DandaKay%C3%A1+-+Espa%C3%A7o+Afro/@-12.9829419,-38.5156852,17z/data=!4m6!3m5!1s0x71605632ff11a2d:0xd4fceea22723df66!8m2!3d-12.9829419!4d-38.5156852" target="_blank" rel="noopener">
+            Abrir no Google Maps <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+          </a>
+        </address>
+
+        <div class="site-footer__map">
+          <iframe
+            title="Mapa: Dandakayá Espaço Afro na Av. Sete de Setembro, 624"
+            src="https://www.google.com/maps?q=DandaKay%C3%A1+Espa%C3%A7o+Afro,+Av.+Sete+de+Setembro,+624,+Salvador+-+BA&ll=-12.9829419,-38.5156852&z=17&hl=pt-BR&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            width="600"
+            height="400"
+          ></iframe>
+        </div>
+
+        <div class="site-footer__meta">
+          <ul class="socials" aria-label="Redes sociais">
+            <li><a href="https://www.instagram.com/dandakaya/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram" /></svg>Instagram</a></li>
+            <li><a href="https://wa.me/%VITE_WHATSAPP_NUMBER%" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>WhatsApp</a></li>
+          </ul>
+          <p class="site-footer__legal">CNPJ %VITE_CNPJ% · © <span data-year>2026</span> Dandakayá Espaço Afro</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

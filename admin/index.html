@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Painel · Dandakayá Espaço Afro</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script type="module" src="/src/admin/main.ts"></script>
+  </head>
+  <body>
+    <div class="admin-loading" data-view="loading">Carregando painel…</div>
+
+    <main class="auth" data-view="config" hidden>
+      <div class="auth__card">
+        <p class="auth__brand"><img src="/logo/dandakaya-logo.svg" alt="Dandakayá Espaço Afro" width="170" height="80" /><span>Painel</span></p>
+        <h1 class="auth__title">Falta conectar o Supabase</h1>
+        <p>Preencha <code>VITE_SUPABASE_URL</code> e <code>VITE_SUPABASE_ANON_KEY</code> no arquivo <code>.env</code> e reinicie o servidor. O passo a passo está no README.</p>
+      </div>
+    </main>
+
+    <main class="auth" data-view="login" hidden>
+      <form class="auth__card" id="login-form" novalidate>
+        <p class="auth__brand"><img src="/logo/dandakaya-logo.svg" alt="Dandakayá Espaço Afro" width="170" height="80" /><span>Painel</span></p>
+        <h1 class="auth__title">Entrar</h1>
+        <div class="field">
+          <label for="login-email">E-mail</label>
+          <input id="login-email" name="email" type="email" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="login-password">Senha</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <p class="auth__error" role="alert"></p>
+        <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+        <button class="auth__link" type="button" id="forgot-password">Esqueci a senha</button>
+      </form>
+    </main>
+
+    <main class="auth" data-view="recovery" hidden>
+      <form class="auth__card" id="recovery-form" novalidate>
+        <p class="auth__brand"><img src="/logo/dandakaya-logo.svg" alt="Dandakayá Espaço Afro" width="170" height="80" /><span>Painel</span></p>
+        <h1 class="auth__title">Nova senha</h1>
+        <div class="field">
+          <label for="new-password">Nova senha</label>
+          <input id="new-password" name="password" type="password" autocomplete="new-password" minlength="8" required />
+          <div class="field__meta"><span>Mínimo de 8 caracteres.</span></div>
+        </div>
+        <p class="auth__error" role="alert"></p>
+        <button class="btn btn--primary btn--block" type="submit">Salvar nova senha</button>
+      </form>
+    </main>
+
+    <main class="auth" data-view="denied" hidden>
+      <div class="auth__card">
+        <p class="auth__brand"><img src="/logo/dandakaya-logo.svg" alt="Dandakayá Espaço Afro" width="170" height="80" /><span>Painel</span></p>
+        <h1 class="auth__title">Acesso não liberado</h1>
+        <p>A conta <strong data-user-email></strong> entrou, mas ainda não tem permissão para editar o site. Peça para quem administra o Supabase incluir você na tabela <code>admins</code>.</p>
+        <button class="btn btn--ghost btn--block" type="button" data-sign-out>Sair</button>
+      </div>
+    </main>
+
+    <div class="dash" data-view="dashboard" hidden>
+      <header class="dash__bar">
+        <p class="dash__brand"><img src="/logo/dandakaya-logo-pequeno.svg" alt="Dandakayá" width="87" height="36" /><span>Painel</span></p>
+        <div class="dash__user">
+          <span data-user-email></span>
+          <a class="btn btn--ghost btn--sm" href="/" target="_blank" rel="noopener">Ver site</a>
+          <button class="btn btn--ghost btn--sm" type="button" data-sign-out>Sair</button>
+        </div>
+      </header>
+
+      <main class="dash__main">
+        <section class="dash__section" aria-labelledby="images-title">
+          <div class="dash__head">
+            <h2 id="images-title">Imagens</h2>
+            <p>As fotos são otimizadas automaticamente antes do envio. Prefira fotos na vertical.</p>
+          </div>
+          <div class="upload-grid" id="uploads"></div>
+        </section>
+
+        <section class="dash__section" aria-labelledby="gallery-title">
+          <div class="dash__head">
+            <h2 id="gallery-title">Carrossel do Instagram</h2>
+            <p>As fotos aparecem na seção "No nosso Instagram", na ordem desta lista. Cole o link do post para a foto abrir no Instagram.</p>
+          </div>
+          <div id="gallery"></div>
+        </section>
+
+        <section class="dash__section" aria-labelledby="texts-title">
+          <div class="dash__head">
+            <h2 id="texts-title">Textos</h2>
+            <p>As alterações aparecem no site assim que você salva.</p>
+          </div>
+          <div id="texts"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

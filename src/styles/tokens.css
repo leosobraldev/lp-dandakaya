@@ -1,0 +1,37 @@
+/* Barro de Maragogipinho: areia crua, barro queimado, pintura de tabatinga. */
+:root {
+  --sand: #efe6d8;
+  --sand-deep: #e5d6c0;
+  --tabatinga: #f7f1e8;
+  --clay: #a34a28;
+  --clay-fired: #8e3d20;
+  --ember: #b5541a;
+  --ember-hot: #9c4714;
+  --brown: #3a2318;
+  --brown-soft: #6b4a3a;
+  --clay-ink: #f3e3d0;
+  --kiln-3: #6e2f1a;
+  --kiln-4: #522617;
+  --ember-light: #e8894a;
+
+  /* Cores do logo oficial (ouro e verde-petróleo), escurecidas o suficiente para texto sobre areia. */
+  --gold: #8a6a28;
+  --teal: #00425c;
+
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', ui-sans-serif, sans-serif;
+  --font-body: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif;
+
+  /* Módulo único: tudo alinha em múltiplos de 8px. */
+  --u: 0.5rem;
+  --gutter: clamp(1rem, 5vw, 3rem);
+  --section-y: clamp(5rem, 12vw, 10rem);
+  --max: 76rem;
+
+  --r-sm: 0.75rem;
+  --r-md: 1.5rem;
+  --r-lg: 2.5rem;
+  --r-pill: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-lift: 0 10px 30px -12px rgb(58 35 24 / 0.35);
+}
