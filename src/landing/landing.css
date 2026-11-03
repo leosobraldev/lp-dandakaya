@@ -514,6 +514,24 @@ a {
 
 /* No celular a headline quebra em mais linhas, maiores, e ocupa a metade de cima da tela. */
 .hero__title {
+  display: grid;
+  justify-items: center;
+  gap: calc(var(--u) * 1.5);
+}
+
+/* Nome da marca dentro do h1 (SEO), discreto acima da headline. */
+.hero__brand {
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.hero__headline {
+  display: block;
   max-width: 8ch;
   font-size: clamp(3.5rem, 1rem + 11vw, 6rem);
   font-weight: 780;
@@ -588,7 +606,7 @@ a {
 }
 
 @media (min-width: 40rem) {
-  .hero__title {
+  .hero__headline {
     max-width: 12ch;
   }
 }
