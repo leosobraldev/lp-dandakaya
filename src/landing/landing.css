@@ -662,6 +662,34 @@ a {
   letter-spacing: -0.025em;
 }
 
+/* Serviços do salão: texto estático para o Google ler as buscas de serviço + cidade. */
+.servicos {
+  display: grid;
+  gap: calc(var(--u) * 1.5);
+  width: 100%;
+  margin: var(--u) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.servicos li {
+  padding-top: calc(var(--u) * 1.5);
+  border-top: 1px solid rgba(247, 241, 232, 0.22);
+}
+
+.servicos h4 {
+  color: var(--tabatinga);
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.servicos p {
+  margin-top: calc(var(--u) * 0.5);
+  font-size: 0.9375rem;
+  opacity: 0.85;
+}
+
 .espaco__body .link-arrow {
   margin-top: var(--u);
   color: var(--tabatinga);

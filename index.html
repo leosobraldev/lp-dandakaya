@@ -31,7 +31,20 @@
         "url": "%VITE_SITE_URL%/",
         "logo": "%VITE_SITE_URL%/logo/dandakaya-logo.png",
         "image": "%VITE_SITE_URL%/logo/dandakaya-logo-circulo.png",
+        "description": "Salão de estética negra e loja de acessórios de ancestralidade das irmãs Jessika e Jamile, em frente à Praça da Piedade, no Centro de Salvador.",
         "telephone": "+55 71 99192-1326",
+        "areaServed": { "@type": "City", "name": "Salvador" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços do salão",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tranças afro" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dreads" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terapia capilar" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maquiagem para pele preta" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lash designer" } }
+          ]
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Av. Sete de Setembro, 624, Sala 103",
@@ -150,7 +163,7 @@
             <svg class="vessel__paint vessel__paint--base" aria-hidden="true"><use href="#m-leaves" /></svg>
               </figure>
               <div class="espaco__body">
-                <h3 class="espaco__title" id="loja-title" data-content="loja_title">Nossa Loja</h3>
+                <h3 class="espaco__title" id="loja-title" data-content="loja_title">Loja de acessórios de ancestralidade</h3>
                 <p data-content="loja_text">
                   Acessórios ligados à ancestralidade negra da linha Dya Muene: búzios, arames e peças voltadas aos orixás e aos Nkisi. E a linha sensorial, com sabonetes e perfumes.
                 </p>
@@ -161,15 +174,37 @@
             </article>
 
             <article class="espaco espaco--offset" aria-labelledby="salao-title">
-              <figure class="vessel vessel--bowl vessel--on-clay" data-reveal data-content-img="salao_image_url" data-alt="Atendimento no Salão Especializado">
+              <figure class="vessel vessel--bowl vessel--on-clay" data-reveal data-content-img="salao_image_url" data-alt="Atendimento no salão do Dandakayá">
                 <svg class="vessel__paint vessel__paint--shoulder" aria-hidden="true"><use href="#m-shoulder" /></svg>
             <svg class="vessel__paint vessel__paint--base" aria-hidden="true"><use href="#m-leaves" /></svg>
               </figure>
               <div class="espaco__body">
-                <h3 class="espaco__title" id="salao-title" data-content="salao_title">Salão Especializado</h3>
+                <h3 class="espaco__title" id="salao-title" data-content="salao_title">Salão de estética negra em Salvador</h3>
                 <p data-content="salao_text">
                   Terapia capilar, dreads, tranças e maquiagem para pele preta, feitos por quem entende de cabelo crespo e cacheado. Novidade: estamos abrindo um studio de Lash Designer.
                 </p>
+                <ul class="servicos" aria-label="Serviços do salão">
+                  <li>
+                    <h4>Tranças</h4>
+                    <p>Tranças afro para cabelo crespo e cacheado, no Centro de Salvador.</p>
+                  </li>
+                  <li>
+                    <h4>Dreads</h4>
+                    <p>Dreads com quem conhece o cabelo crespo de perto.</p>
+                  </li>
+                  <li>
+                    <h4>Terapia capilar</h4>
+                    <p>Cuidado para fortalecer e tratar o cabelo crespo e cacheado.</p>
+                  </li>
+                  <li>
+                    <h4>Maquiagem para pele preta</h4>
+                    <p>Produtos e tons pensados para a pele negra.</p>
+                  </li>
+                  <li>
+                    <h4>Lash designer</h4>
+                    <p>Studio de cílios, chegando agora.</p>
+                  </li>
+                </ul>
                 <a class="link-arrow" href="https://wa.me/%VITE_WHATSAPP_NUMBER%?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20sal%C3%A3o." target="_blank" rel="noopener" data-track="whatsapp-salao">
                   Agendar no salão <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
                 </a>
@@ -236,6 +271,14 @@
             <details class="faq__item" name="faq">
               <summary>Quais serviços o salão faz?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
               <div class="faq__answer"><p>Terapia capilar, dreads, tranças e maquiagem para pele preta, entre outros. E estamos abrindo um studio de Lash Designer. Para valores e horários, chame no WhatsApp.</p></div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary>Vocês fazem tranças e dreads em Salvador?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
+              <div class="faq__answer"><p>Sim. O salão do Dandakayá, no Centro de Salvador, faz tranças afro e dreads, além de terapia capilar e maquiagem para pele preta. Chame no WhatsApp para combinar o seu atendimento.</p></div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary>Vocês atendem cabelo crespo e cacheado?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
+              <div class="faq__answer"><p>Sim, é a nossa especialidade. Do tratamento ao penteado, o salão é feito por quem entende de cabelo crespo e cacheado.</p></div>
             </details>
             <details class="faq__item" name="faq">
               <summary>Qual é o horário de funcionamento?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary>
