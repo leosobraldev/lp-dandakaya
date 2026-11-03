@@ -97,6 +97,8 @@ No /admin → "Carrossel do Instagram": escolha a foto, escreva uma descrição 
 
 Depois de mudar uma variável, faça um novo deploy (as variáveis entram no build).
 
+O build gera `/sitemap.xml` e `/robots.txt` com o endereço de `VITE_SITE_URL` (ou o `.vercel.app`). No Google Search Console, envie `sitemap.xml` em Sitemaps. O arquivo de verificação do Search Console fica em `public/`.
+
 No Supabase, em Authentication → URL Configuration, adicione `https://SEU-DOMINIO/admin/` em Redirect URLs para o "Esqueci a senha" funcionar.
 
 Outros hosts estáticos (Netlify, Cloudflare Pages) funcionam igual: build `npm run build`, pasta `dist`.
